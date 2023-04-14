@@ -22,3 +22,10 @@
       transform: translateY(0);
     }
   }
+
+  .meals-error {
+    text-align: center;
+    color: red;
+    font-weight: 100;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+  }
