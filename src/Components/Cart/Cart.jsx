@@ -53,7 +53,7 @@ function Cart(props) {
       response = await response.json();
       console.log("response", response);
       CartCtx.clearCart();
-      props.hideCart();
+      props.loadSuccessAnimation();
     }
   }
   return (

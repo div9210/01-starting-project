@@ -1,0 +1,29 @@
+.close-orders {
+    align-items: right;
+    margin-left: 87%;
+}
+
+.order-list {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 3px #ccc;
+    border-radius: 5px;
+    height: 500px;
+    overflow-y: scroll;
+}
+
+.order-list > ul > li {
+    list-style: none;
+}
+.order-list > ul > li > h3 {
+    color: #b0cf99;
+}
+
+.order-heading {
+   text-align: center;
+   color: #b1a8a8;
+}

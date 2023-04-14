@@ -1,6 +1,14 @@
 import React from "react";
 import classes from "./Checkout.module.css";
 
+function isEmpty(value) {
+  return value.trim() === "";
+}
+
+function isFiveChars(value) {
+  return value.trim().length === 5;
+}
+
 function Checkout(props) {
   function onSubmitHandler(e) {
     e.preventDefault();
@@ -10,7 +18,17 @@ function Checkout(props) {
       postal: e.target.postal.value,
       city: e.target.city.value,
     };
-    props.makeAnOrder({ userInfo: submittedValues });
+    if (
+      isEmpty(submittedValues.name) ||
+      isEmpty(submittedValues.street) ||
+      isEmpty(submittedValues.city) ||
+      !isFiveChars(submittedValues.postal)
+    ) {
+      alert("Please enter valid values");
+      return;
+    } else {
+      props.makeAnOrder({ userInfo: submittedValues });
+    }
   }
   return (
     <form onSubmit={onSubmitHandler}>
